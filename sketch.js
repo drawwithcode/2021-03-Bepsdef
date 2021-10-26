@@ -1,4 +1,6 @@
 // A Class to describe a "doorbell" (really a button)
+let contains;
+
 class Doorbell {
   constructor(x_, y_, r_) {
     // Location and size
@@ -6,6 +8,7 @@ class Doorbell {
     this.y = y_;
     this.r = r_;
   }
+
   // Is a point inside the doorbell? (used for mouse rollover, etc.)
   contains(mx, my) {
     return dist(mx, my, this.x, this.y) < this.r;
