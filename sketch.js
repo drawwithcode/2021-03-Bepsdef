@@ -47,7 +47,7 @@ let doorbell;
 function preload() {
   // Load the sound file. I uploaded 12 different sounds
 
-  dingdong = loadSound("assets/1-sound.OGG");
+  dingdong = loadSound("./assets/1-sound.OGG");
   dingdong1 = loadSound("assets/2-sound.OGG");
   dingdong2 = loadSound("assets/3-sound.OGG");
   dingdong3 = loadSound("assets/4-sound.OGG");
