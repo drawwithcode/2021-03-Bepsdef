@@ -1,20 +1,19 @@
-// A Class to describe a "doorbell" (really a button)
 let contains;
 
+// Class to create circular buttons (the coding train reference)
 class Doorbell {
   constructor(x_, y_, r_) {
-    // Location and size
     this.x = x_;
     this.y = y_;
     this.r = r_;
   }
 
-  // Is a point inside the doorbell? (used for mouse rollover, etc.)
+  // contains > to define when the mouse is over the butt0n
   contains(mx, my) {
     return dist(mx, my, this.x, this.y) < this.r;
   }
 
-  // Show the doorbell
+  // display the button
   display(mx, my) {
     if (this.contains(mx, my)) {
       fill(143, 0, 255);
@@ -27,6 +26,7 @@ class Doorbell {
   }
 }
 
+// dingdong is the sound.
 let dingdong;
 let dingdong1;
 let dingdong3;
@@ -45,7 +45,7 @@ let dingdong11;
 let doorbell;
 
 function preload() {
-  // Load the sound file.
+  // Load the sound file. I uploaded 12 different sounds
 
   dingdong = loadSound("assets/1-sound.OGG");
   dingdong1 = loadSound("assets/2-sound.OGG");
@@ -62,20 +62,18 @@ function preload() {
   dingdong12 = loadSound("assets/13-sound.OGG");
   bravosound = loadSound("assets/bravo-sound.OGG");
 
-  title = loadImage("assets/title.png");
+  // images
+
   uomocentro = loadImage("assets/uomocentro.png");
   mascella = loadImage("assets/mascella.png");
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
-  osc = new p5.TriOsc();
-  osc.amp(0.5);
-
+  // get amplitude to make images follow sound
   amplitude = new p5.Amplitude();
 
-  // Create a new doorbell
+  // Create a new doorbell - new buttons
   doorbell = new Doorbell(width / 2 + 32, height / 2, 10);
   doorbell1 = new Doorbell(width / 2 - 20, 215, 10);
   doorbell2 = new Doorbell(width / 2 + 70, 215, 10);
@@ -88,16 +86,19 @@ function setup() {
   doorbell9 = new Doorbell(width / 2 - 190, 190, 10);
   doorbell10 = new Doorbell(width / 2 + 230, 190, 10);
   doorbell11 = new Doorbell(width / 2 + 35, 100, 10);
+
+  // bottom buttons ;)
   neverstop = new Doorbell(50, height - 65, 50);
   joingroup = new Doorbell(250, height - 65, 50);
 }
 
 function draw() {
+  // control the amplitude for ellipse, mascella and background
   let level = amplitude.getLevel();
   let movement = map(level, 0, 1, 10, 35);
   let bg = map(level, 0, 0.1, 255, 0);
   let ellipseSound = map(level, 0, 0.5, 200, windowHeight);
-
+  // make the title move
   let xStart = -frameCount * 2;
 
   background(0, bg, 0);
@@ -105,12 +106,11 @@ function draw() {
   noFill();
   stroke("white");
   push();
-
   translate(width / 2, height / 2);
   ellipse(0, 0, windowWidth, ellipseSound);
-
   pop();
 
+  //loop title
   for (let x = xStart; x < width; x += 1150) {
     push();
     noStroke();
@@ -120,7 +120,7 @@ function draw() {
 
     pop();
   }
-
+  // bottom text
   let s =
     "The website is a collection of verses produced by real people. In this social experiment the voice becomes an artistic form to express oneself without shame and declare oneself to others";
   noStroke();
@@ -136,6 +136,7 @@ function draw() {
   image(uomocentro, width / 2 - 320, 0, 700, 700);
   image(mascella, width / 2 - 320, movement, 700, 650);
 
+  // display the buttons in drawing
   doorbell.display(mouseX, mouseY);
   doorbell1.display(mouseX, mouseY);
   doorbell2.display(mouseX, mouseY);
@@ -151,6 +152,7 @@ function draw() {
   neverstop.display(mouseX, mouseY);
   joingroup.display(mouseX, mouseY);
 
+  // pointer
   push();
   translate(mouseX, mouseY);
   stroke("white");
@@ -160,7 +162,7 @@ function draw() {
 }
 
 function mousePressed() {
-  // If the user clicks on the doorbell, play the sound!
+  // If the user clicks on the doorbell, play the sound
   if (doorbell.contains(mouseX, mouseY)) {
     dingdong.play();
   }
@@ -197,6 +199,8 @@ function mousePressed() {
   if (doorbell11.contains(mouseX, mouseY)) {
     dingdong11.play();
   }
+
+  // special buttons
   if (neverstop.contains(mouseX, mouseY)) {
     dingdong12.loop();
     dingdong11.loop();
@@ -207,11 +211,13 @@ function mousePressed() {
     dingdong6.loop();
     dingdong5.loop();
   }
+
+  // open the whatsapp page
   if (joingroup.contains(mouseX, mouseY)) {
     window.open("https://chat.whatsapp.com/I6CvRlkyIW9IeuV1KXuuoa");
   }
 }
-
+//let's resize the window cause we are cool
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
