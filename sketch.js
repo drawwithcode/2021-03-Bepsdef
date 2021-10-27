@@ -48,19 +48,19 @@ function preload() {
   // Load the sound file. I uploaded 12 different sounds
 
   dingdong = loadSound("./assets/1-sound.OGG");
-  dingdong1 = loadSound("assets/2-sound.OGG");
-  dingdong2 = loadSound("assets/3-sound.OGG");
-  dingdong3 = loadSound("assets/4-sound.OGG");
-  dingdong4 = loadSound("assets/5-sound.OGG");
-  dingdong5 = loadSound("assets/6-sound.OGG");
-  dingdong6 = loadSound("assets/7-sound.OGG");
-  dingdong7 = loadSound("assets/8-sound.OGG");
-  dingdong8 = loadSound("assets/9-sound.OGG");
-  dingdong9 = loadSound("assets/10-sound.OGG");
-  dingdong10 = loadSound("assets/11-sound.OGG");
-  dingdong11 = loadSound("assets/12-sound.OGG");
-  dingdong12 = loadSound("assets/13-sound.OGG");
-  bravosound = loadSound("assets/bravo-sound.OGG");
+  dingdong1 = loadSound("./assets/2-sound.OGG");
+  dingdong2 = loadSound("./assets/3-sound.OGG");
+  dingdong3 = loadSound("./assets/4-sound.OGG");
+  dingdong4 = loadSound("./assets/5-sound.OGG");
+  dingdong5 = loadSound("./assets/6-sound.OGG");
+  dingdong6 = loadSound("./assets/7-sound.OGG");
+  dingdong7 = loadSound("./assets/8-sound.OGG");
+  dingdong8 = loadSound("./assets/9-sound.OGG");
+  dingdong9 = loadSound("./assets/10-sound.OGG");
+  dingdong10 = loadSound("./assets/11-sound.OGG");
+  dingdong11 = loadSound("./assets/12-sound.OGG");
+  dingdong12 = loadSound("./assets/13-sound.OGG");
+  bravosound = loadSound("./assets/bravo-sound.OGG");
 
   // images
 
