@@ -89,7 +89,7 @@ function setup() {
 
   // bottom buttons ;)
   neverstop = new Doorbell(50, height - 65, 50);
-  joingroup = new Doorbell(250, height - 65, 50);
+  //joingroup = new Doorbell(250, height - 65, 50);
 }
 
 function draw() {
@@ -131,7 +131,7 @@ function draw() {
   text(s, width - 320, height - 90, 300, 300);
 
   text("pls don't touch me", 90, height - 70, 300, 300);
-  text("pls touch me", 290, height - 70, 300, 300);
+  //text("pls touch me", 290, height - 70, 300, 300);
 
   image(uomocentro, width / 2 - 320, 0, 700, 700);
   image(mascella, width / 2 - 320, movement, 700, 650);
@@ -150,7 +150,7 @@ function draw() {
   doorbell10.display(mouseX, mouseY);
   doorbell11.display(mouseX, mouseY);
   neverstop.display(mouseX, mouseY);
-  joingroup.display(mouseX, mouseY);
+  //joingroup.display(mouseX, mouseY);
 
   // pointer
   push();
@@ -213,11 +213,12 @@ function mousePressed() {
   }
 
   // open the whatsapp page
-  if (joingroup.contains(mouseX, mouseY)) {
-    window.open("https://chat.whatsapp.com/I6CvRlkyIW9IeuV1KXuuoa");
+  //   //if (joingroup.contains(mouseX, mouseY)) {
+  //    // window.open("https://chat.whatsapp.com/I6CvRlkyIW9IeuV1KXuuoa");
+  //   }
+  // }
+  //let's resize the window cause we are cool
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
   }
-}
-//let's resize the window cause we are cool
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
 }
