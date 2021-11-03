@@ -123,7 +123,7 @@ function draw() {
   }
   // bottom text
   let s =
-    "The website is a collection of verses produced by real people. In this social experiment the voice becomes an artistic form to express oneself without shame and declare oneself to others";
+    "The website is a collection of verses produced by real people. Thank you all. I will never forget you";
   noStroke();
   noStroke();
   fill(143, 0, 255);
