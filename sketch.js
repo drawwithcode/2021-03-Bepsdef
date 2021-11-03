@@ -66,6 +66,7 @@ function preload() {
 
   uomocentro = loadImage("assets/uomocentro.png");
   mascella = loadImage("assets/mascella.png");
+  asset1 = loadImage("assets/asset1.png");
 }
 
 function setup() {
@@ -202,6 +203,7 @@ function mousePressed() {
 
   // special buttons
   if (neverstop.contains(mouseX, mouseY)) {
+    image.show();
     dingdong12.loop();
     dingdong11.loop();
     dingdong10.loop();
