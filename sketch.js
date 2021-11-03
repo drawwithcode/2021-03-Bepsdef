@@ -128,7 +128,7 @@ function draw() {
   noStroke();
   fill(143, 0, 255);
   fill("white");
-  textSize(15);
+  textSize(11);
   text(s, width - 320, height - 90, 300, 300);
 
   text("pls don't touch me", 90, height - 70, 300, 300);
