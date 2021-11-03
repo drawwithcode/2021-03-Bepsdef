@@ -131,7 +131,7 @@ function draw() {
   textSize(11);
   text(s, width - 320, height - 90, 300, 300);
 
-  text("pls don't touch me", 90, height - 70, 300, 300);
+  text("pls n't touch me", 90, height - 70, 300, 300);
   //text("pls touch me", 290, height - 70, 300, 300);
 
   image(uomocentro, width / 2 - 320, 0, 700, 700);
